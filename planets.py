@@ -16,3 +16,16 @@ spacecraft = [
    ("Cassini", "Saturn"),
    ("Viking", "Mars"),
 ]
+
+for planet in planet_list:
+    visited = False
+    
+    for ship in spacecraft:
+        if ship[1] == planet:
+            visited = True
+            craft = ship[0]
+        
+    if visited:
+        print(f'{planet} has been visited by {craft}')
+    else:
+        print(f'{planet} has not been visited by any spacecraft.')
